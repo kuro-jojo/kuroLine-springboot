@@ -1,0 +1,3 @@
+[submodule "kuroline-users-ms"]
+	path = kuroline-users-ms
+	url = git@github.com:kuro-jojo/kuroline-users-ms.git
