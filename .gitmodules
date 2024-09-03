@@ -1,3 +1,6 @@
 [submodule "kuroline-users-ms"]
 	path = kuroline-users-ms
 	url = git@github.com:kuro-jojo/kuroline-users-ms.git
+[submodule "kuroline-chat-ms"]
+	path = kuroline-chat-ms
+	url = git@github.com:kuro-jojo/kuroline-chat-ms.git
