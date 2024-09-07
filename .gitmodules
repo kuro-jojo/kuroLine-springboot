@@ -4,3 +4,9 @@
 [submodule "kuroline-chat-ms"]
 	path = kuroline-chat-ms
 	url = git@github.com:kuro-jojo/kuroline-chat-ms.git
+[submodule "kuroline-eureka-server"]
+	path = kuroline-eureka-server
+	url = git@github.com:kuro-jojo/kuroline-eureka-server.git
+[submodule "kuroline-api-gateway"]
+	path = kuroline-api-gateway
+	url = git@github.com:kuro-jojo/kuroline-api-gateway.git
