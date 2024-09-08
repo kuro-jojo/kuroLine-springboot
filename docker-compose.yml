@@ -1,0 +1,50 @@
+name: kuroline
+
+services:
+  eureka-server:
+    build:
+      context: kuroline-eureka-server
+      dockerfile: Dockerfile
+    ports:
+      - 8761:8761
+    networks:
+      - kuroline-network
+    environment:  
+      - EUREKA_INSTANCE_HOSTNAME=eureka-server
+
+  api-gateway:
+    build:
+      context: kuroline-api-gateway
+      dockerfile: Dockerfile
+    ports:
+      - 8090:8090
+    networks:
+      - kuroline-network
+    depends_on:
+      - eureka-server
+
+  users-ms:
+    build:
+      context: kuroline-users-ms
+      dockerfile: Dockerfile
+    ports:
+      - 8091:8091
+    networks:
+      - kuroline-network
+    depends_on:
+      - api-gateway
+
+  chat-ms:
+    build:
+      context: kuroline-chat-ms
+      dockerfile: Dockerfile
+    ports:
+      - 8092:8092
+    networks:
+      - kuroline-network
+    depends_on:
+      - api-gateway
+
+networks:
+  kuroline-network:
+    driver: bridge
